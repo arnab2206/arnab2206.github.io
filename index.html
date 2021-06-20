@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<!-- <html>
   <head>
   <base target="_top">
   <style>
@@ -8,7 +8,7 @@
     margin-left : 0%
   }
   </style>
-    
+  <link rel="stylesheet" href="style.css">
   </head>
   <body>
   <form style="padding: 50x 100px;">
@@ -25,10 +25,36 @@
      <br><br>
      
      <br><br><br>
-     <!-- <input type="button" value="Submit"
-        onclick="google.script.run.userDidClickSubmit(document.getElementById('numberOfSets').value, document.getElementById('questionsCount').value, document.getElementById('docUrl').value)" /> -->
         <input type="button" value="Submit" onclick="google.script.run.userDidClickSubmit(document.getElementById('commissionMonth').value, document.getElementById('amount').value)" />
      <input type="button" value="Cancel" onclick="google.script.host.close()" />
   </form> 
   </body>
+</html> -->
+<html>
+<title>GST Invoice Generator </title>
+  <head>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+<form method="POST" action="
+https://script.google.com/macros/s/AKfycbzdzhLf6y1LoJ7xd3xn2KScOBZzDZOQbrZQNut1AqPWV2ArG6dcSYADlkFz-rl7yvUVeg/exec
+"
+>
+<div class="container">
+  <div class="brand-logo"></div>
+  <div class="brand-title">GST Invoice Generator</div>
+  <div class="inputs">
+    <label>Commission Month and Year:</label>
+    <input type="text" placeholder="June 2021" name="commissionMonth" id='commissionMonth' required/>
+    <label>Amount:</label>
+    <input type="number" placeholder="50000" name="amount" id='amount' required/>
+    <label>Invoice Number:</label>
+    <input type="text" placeholder="01" name="invoiceNo" id='invoiceNo' />	
+	<p style="font-size: 10px; color: green;">If left blank, will increment last generated Invoice Number</p>
+    <button type="submit">Generate</button>
+  </div>
+  <a href="https://www.linkedin.com/in/arnab2206/">MADE BY ARNAB</a>
+</div>
+</form>
+</body>
 </html>
